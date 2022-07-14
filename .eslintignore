@@ -1,8 +1,0 @@
-node_modules
-
-# OSX
-.DS_Store
-.eslintrc.js
-lib
-dist
-build

@@ -1,7 +1,0 @@
-node_modules
-
-# OSX
-.DS_Store
-lib
-dist
-build

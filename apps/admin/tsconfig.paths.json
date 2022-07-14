@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@ultimate/*": ["../../packages/src/*"]
-    }
-  }
-}

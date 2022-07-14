@@ -1,27 +1,25 @@
 module.exports = {
-  extends: ['airbnb-typescript', 'plugin:import/typescript', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: 'tsconfig.json',
+    tsconfigRootDir : __dirname, 
     sourceType: 'module',
-    ecmaVersion: 'latest',
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
-  plugins: ['import', '@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  ignorePatterns: ['.eslintrc.js'],
   rules: {
-    'prettier/prettier': ['error'],
-    'react/jsx-filename-extension': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 1,
     '@typescript-eslint/interface-name-prefix': 'off',
-    'no-underscore-dangle': 'off',
-    'import/no-extraneous-dependencies': 'off',
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
