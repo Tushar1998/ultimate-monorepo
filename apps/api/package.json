@@ -1,6 +1,6 @@
 {
   "name": "@ultimate/api",
-  "version": "0.0.1-next.1",
+  "version": "0.0.1-next.2",
   "description": "",
   "author": "",
   "private": true,
@@ -21,15 +21,15 @@
     "test:e2e": "jest --config ./apps/root/test/jest-e2e.json"
   },
   "dependencies": {
+    "@nestjs/common": "^9.0.1",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.1",
-    "@nestjs/common": "^9.0.1",
     "@nestjs/microservices": "^9.0.1",
     "@nestjs/mongoose": "^9.2.0",
     "@nestjs/platform-express": "^9.0.1",
     "@nestjs/swagger": "^6.0.4",
-    "@ultimate/util": "^0.0.1-next.1",
-    "@ultimate/types": "^0.0.1-next.1",
+    "@ultimate/types": "^0.0.1-next.2",
+    "@ultimate/util": "^0.0.1-next.2",
     "class-validator": "^0.13.2",
     "mongoose": "^6.5.0",
     "reflect-metadata": "^0.1.13",
