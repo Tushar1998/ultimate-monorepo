@@ -1,17 +1,18 @@
 export default () => ({
+  log          : { level: process.env.LOG_LEVEL || 'default' },
   microservices: {
     service: {
-      port: process.env.SERVICE_MICROSERVICE_PORT,
-      host: process.env.SERVICE_MICROSERVICE_HOST,
+      host: process.env.IAM_MICROSERVICE_HOST,
+      port: process.env.IAM_MICROSERVICE_PORT,
     },
   },
-  http_port: process.env.HTTP_PORT ?? '8000',
+  http_port : process.env.HTTP_PORT ?? '8000',
   http_port2: process.env.HTTP_PORT2 ?? '8001',
-  swagger: {
-    auth: {
-      authorization: { url: process.env.SWAGGER_AUTH_AUTHORIZATION_URL },
-      token: { url: process.env.SWAGGER_AUTH_TOKEN_URL },
-      client_id: process.env.SWAGGER_AUTH_CLIENT_ID,
-    },
+  auth0     : {
+    domain  : process.env.AUTH0_DOMAIN,
+    audience: process.env.AUTH0_AUDIENCE,
+  },
+  root: {
+    mongo_uri: process.env.ROOT_MONGO_URI,
   },
 });

@@ -3,8 +3,8 @@ import { IamController } from './iam.controller';
 import { IamService } from './iam.service';
 
 @Module({
-  imports: [],
+  imports    : [],
   controllers: [IamController],
-  providers: [IamService],
+  providers  : [IamService],
 })
 export class IamModule {}
